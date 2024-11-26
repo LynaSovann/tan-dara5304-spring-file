@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: tan-dara5304-spring-file-certificate
+  namespace: tan-dara5304-spring-file
+spec:
+  secretName: tan-dara5304-spring-file-secret-tls
+  commonName: tan-dara5304-spring-file.assessify.org
+  dnsNames:
+  - tan-dara5304-spring-file.assessify.org
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
