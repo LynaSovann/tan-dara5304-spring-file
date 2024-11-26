@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tan-dara5304-spring-file-deployment
+  labels:
+    app: tan-dara5304-spring-file
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tan-dara5304-spring-file
+  template:
+    metadata:
+      labels:
+        app: tan-dara5304-spring-file
+    spec:
+      containers:
+        - name: tan-dara5304-spring-file-container
+          image: pipejet/tan-dara5304-spring-file:latest
+          ports:
+            - containerPort: 8080
