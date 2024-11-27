@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tan-dara5304-spring-file-ingress
+  namespace: tan-dara5304-spring-file
+  annotation:
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: pipejet-v2.tinhlgkiddy.fun
+    http:
+      paths:
+      - path: /
+        pathType: Prefix  
+        backend:
+          service:
+            name: tan-dara5304-spring-file-service 
+            port:
+              number: 8235
